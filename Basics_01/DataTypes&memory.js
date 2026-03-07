@@ -54,7 +54,3 @@ let big = 12345678901234567890n;
 //      ✔ Immutable
 
 
-
-
-// 2️⃣ Reference Types (Non-Primitive)
-// -----> Object, Arrey and Function
