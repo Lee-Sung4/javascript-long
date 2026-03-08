@@ -66,3 +66,55 @@ third()
 // Push: When a function is invoked (called), a corresponding entry called a stack frame (or activation record) is created. This stack frame, which contains the function's arguments, local variables, and the return address (the location in the code to return to after the function finishes), is then pushed onto the top of the call stack.
 
 // Pop: When a function completes its execution (returns a value or reaches its end), its stack frame is popped off the top of the stack. Control then returns to the function whose frame is now at the top of the stack, at the specific return address that was saved.
+
+
+
+
+
+
+
+// HEAP MEMORY
+
+// 1. What is Heap Memory?
+// Heap memory is the place where JavaScript stores complex data types such as objects, arrays, and functions.
+// Unlike stack memory, heap memory:
+// * Stores large and dynamic data
+// * Variables store references (addresses) to that data
+
+// Heap stores reference types: Object{}, Arrays[], Function, Dates, Map/Sets
+
+let user1 = {name: "John"};
+let user2 = user1;
+
+user2.name = "Mike";
+
+console.log(user1.name);
+
+//  MORE METHODS IN ARRAYS LESSON
+
+let arr1 = [1,2,3];
+let arr2 = arr1;
+
+arr2.push(4);
+let index = arr2.indexOf(3)
+arr2.splice(index, 2);
+
+console.log(arr1); // [1,2,3,4]
+
+// To be continue
+
+// What happens in memory
+
+// Object { name: "John" } is stored in heap memory
+// obj1 stores the reference (address) of that object
+// obj2 = obj1 → both point to the same object
+// Changing obj2.name also changes obj1.name
+// So both variables point to the same heap object.
+
+
+// Heap memory in JavaScript:
+
+// Stores objects, arrays, and functions
+// Variables store references to heap data
+// Data can be shared between variables
+// Managed automatically by garbage collection
